@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="愚人节图片带字大全提供最新、最全的愚人节创意图片与文字素材。包含整蛊图片、搞怪表情包、幽默文案模板，适合发朋友圈、群聊及社交媒体分享。">
+    <meta name="keywords" content="愚人节图片带字大全,愚人节表情包,愚人节文案,整蛊图片,搞怪图片">
+    <title>愚人节图片带字大全-创意整蛊素材与幽默文案分享平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #ff6b81;
+            --accent-color: #2f3542;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Category Grid */
+        .section-container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 160px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 3rem;
+            position: relative;
+        }
+        
+        .card-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .count {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Feature Grid (Image focus) */
+        .feature-section {
+            background-color: #fff;
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 20px 10px 10px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Text Templates Section */
+        .text-section {
+            background-color: var(--bg-color);
+            padding: 60px 0;
+        }
+
+        .text-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .text-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .text-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .text-content {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            white-space: pre-wrap;
+        }
+
+        .copy-btn {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background-color: #e1e1e1;
+        }
+
+        .copy-btn.copied {
+            background-color: #2ed573;
+            color: white;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--accent-color);
+            color: #a4b0be;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .nav-container { padding: 0 15px; }
+            nav ul { display: none; } /* Simplified mobile nav for demo */
+            .section-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>😄</span> 愚人节图片带字大全
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">整蛊图片</a></li>
+                    <li><a href="#">搞怪表情</a></li>
+                    <li><a href="#">趣味文案</a></li>
+                    <li><a href="#">节日专题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>愚人节图片带字大全</h1>
+            <p>海量创意素材，助你在这个四月一日轻松整蛊好友，分享快乐。包含高清整蛊图片、搞怪表情包及趣味文案。</p>
+            <div class="hero-tags">
+                <span class="tag">✨ 免费下载</span>
+                <span class="tag">🚀 高清原图</span>
+                <span class="tag">📱 社交分享</span>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section-container">
+            <h2 class="section-title">热门分类</h2>
+            <div class="category-grid">
+                <article class="category-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/prank1/400/300" alt="整蛊图片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">创意整蛊图片</h3>
+                        <p class="card-desc">经典的恶作剧图片素材，适合发朋友圈或制作整蛊视频背景。</p>
+                        <div class="card-footer">
+                            <span class="count">1,204 张</span>
+                            <span>查看 ></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/emoji2/400/300" alt="搞怪表情包">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">搞怪表情包</h3>
+                        <p class="card-desc">逗比搞笑表情包合集，让你的聊天对话瞬间充满趣味。</p>
+                        <div class="card-footer">
+                            <span class="count">3,560 个</span>
+                            <span>查看 ></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/text3/400/300" alt="趣味文字">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">趣味文字模板</h3>
+                        <p class="card-desc">简单易用的文字生成器模板，自定义图片文字内容。</p>
+                        <div class="card-footer">
+                            <span class="count">890 模板</span>
+                            <span>查看 ></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/bear4/400/300" alt="节日壁纸">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">节日专属壁纸</h3>
+                        <p class="card-desc">精美愚人节主题手机壁纸，为你的设备增添节日氛围。</p>
+                        <div class="card-footer">
+                            <span class="count">450 张</span>
+                            <span>查看 ></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="feature-section">
+            <div class="section-container">
+                <h2 class="section-title">精选图片推荐</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankA/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>😱 惊吓时刻</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankB/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>🤡 搞怪反转</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankC/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>😂 搞笑瞬间</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankD/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>🤯 不可思议</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankE/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>🤪 疯狂搞怪</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankF/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>😜 甜蜜整蛊</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankG/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>👻 恐怖氛围</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/prankH/300/300" alt="整蛊图片示例">
+                        <div class="gallery-overlay">
+                            <span>🎁 神秘礼物</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text Templates Section -->
+        <section class="text-section">
+            <div class="section-container">
+                <h2 class="section-title">热门文案模板</h2>
+                <div class="text-list">
+                    <div class="text-card">
+                        <h3>经典整蛊语录</h3>
+                        <div class="text-content">今天是个特殊的日子，为了庆祝这个节日，我决定给你一个特别的惊喜——
+恭喜你，被选中成为我愚人节整蛊名单的第一名！
+祝节日快乐，虽然这可能不是什么好消息... 🤪</div>
+                        <button class="copy-btn" onclick="copyText(this)">复制文案</button>
+                    </div>
+                    <div class="text-card">
+                        <h3>幽默自嘲风</h3>
+                        <div class="text-content">愚人节到了，大家都在忙着整蛊别人。
+而我，决定整蛊一下镜子里的自己——
+毕竟，照镜子也是需要勇气的，对吧？ 😂</div>
+                        <button class="copy-btn" onclick="copyText(this)">复制文案</button>
+                    </div>
+                    <div class="text-card">
+                        <h3>甜蜜陷阱风</h3>
+                        <div class="text-content">我知道你一直在等一个特别的消息...
+那就是：愚人节到了！
+但我更想知道，你的钱包准备好了吗？ 💰</div>
+                        <button class="copy-btn" onclick="copyText(this)">复制文案</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">常见问题 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">这些图片都是免费使用的吗？</div>
+                <div class="faq-answer">
+                    <p>是的，本站提供的图片素材均为公开共享资源，可用于个人社交媒体分享、朋友圈转发等非商业用途。如需商用，请务必联系版权方获取授权。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何制作带字的整蛊图片？</div>
+                <div class="faq-answer">
+                    <p>您可以使用本站提供的文字模板直接复制文案，或者使用在线图片编辑器（如Canva、美图秀秀）将文字添加到我们的高清图片上，即可快速生成专属整蛊图。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">愚人节整蛊需要注意什么？</div>
+                <div class="faq-answer">
+                    <p>愚人节虽然是开玩笑的日子，但请务必注意分寸。避免使用过于恐怖、暴力或会让他人产生严重心理阴影的素材。尊重他人的感受，确保玩笑在双方可接受的范围内。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    愚人节图片带字大全致力于为用户提供最丰富、最有趣的节日素材。我们收集整理了各类创意图片和文案，让您的节日生活更加精彩。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">整蛊图片</a></li>
+                    <li><a href="#">表情包合集</a></li>
+                    <li><a href="#">节日壁纸</a></li>
+                    <li><a href="#">趣味文案</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p style="font-size: 0.9rem;">第一时间获取最新素材更新</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 愚人节图片带字大全. All Rights Reserved. 本站仅提供素材展示与分享服务。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // Toggle clicked item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Copy Text Logic
+        function copyText(btn) {
+            const textContent = btn.previousElementSibling.innerText;
+            
+            navigator.clipboard.writeText(textContent).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = "已复制！";
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                btn.innerText = "复制失败";
+            });
+        }
+    </script>
+</body>
+  </html>

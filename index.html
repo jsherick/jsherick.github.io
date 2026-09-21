@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="咪咕视频体育直播频道，为您提供高清、流畅的足球、篮球、网球、乒乓球等赛事直播。包含NBA、CBA、英超、西甲、中超等热门体育赛事在线观看，赛事回放与精彩集锦。">
+    <meta name="keywords" content="咪咕视频体育直播,体育直播,足球直播,篮球直播,在线看球,NBA直播,CBA直播,英超直播,中超直播">
+    <title>咪咕视频体育直播-高清赛事在线观看与回放平台</title>
+    <style>
+        :root {
+            --primary-color: #e60012; /* 咪咕红 */
+            --secondary-color: #1a1a1a;
+            --accent-color: #ffcc00;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-radius: 8px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: var(--primary-color);
+        }
+
+        .user-actions {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .btn-login {
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn-login:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: var(--spacing-sm);
+            color: white;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+        }
+
+        .live-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(230, 0, 18, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(230, 0, 18, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(230, 0, 18, 0); }
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            background: var(--card-bg);
+            padding: var(--spacing-md) 0;
+            margin-bottom: var(--spacing-lg);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.2s;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .category-item:hover {
+            background-color: rgba(230, 0, 18, 0.1);
+            color: var(--primary-color);
+        }
+
+        .category-item.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 赛事直播列表 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            border-left: 5px solid var(--primary-color);
+            padding-left: var(--spacing-md);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .live-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .match-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .match-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .match-banner {
+            height: 160px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .match-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .live-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .match-info {
+            padding: var(--spacing-md);
+        }
+
+        .match-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .match-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .match-teams {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .team {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .team-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #eee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .score {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-color);
+            background: rgba(230, 0, 18, 0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .btn-watch {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .btn-watch:hover {
+            background-color: #cc0010;
+        }
+
+        /* 赛事预告/回放 */
+        .section-container {
+            margin-bottom: 40px;
+        }
+
+        .match-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .match-row {
+            background: var(--card-bg);
+            padding: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: var(--border-radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .match-row-info {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex: 1;
+        }
+
+        .time-tag {
+            color: var(--text-sub);
+            font-size: 13px;
+            min-width: 60px;
+        }
+
+        .match-row-content {
+            flex: 1;
+        }
+
+        .match-row-title {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .match-row-status {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        .btn-row {
+            padding: 6px 16px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .btn-row:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* 底部 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #999;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                gap: 15px;
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .category-list {
+                gap: 10px;
+            }
+
+            .match-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .btn-row {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+                <span>咪咕视频</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">体育直播</a></li>
+                    <li><a href="#">足球</a></li>
+                    <li><a href="#">篮球</a></li>
+                    <li><a href="#">网球</a></li>
+                    <li><a href="#">奥运</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn-login">登录</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1><span class="live-badge">LIVE</span> 2024赛季欧冠联赛小组赛</h1>
+                <p>关注咪咕视频，享受高清、低延迟的体育赛事直播体验，支持多屏互动，不错过每一个精彩瞬间。</p>
+                <a href="#" class="btn-watch" style="background: white; color: var(--primary-color); padding: 12px 30px; font-size: 16px;">立即观看直播</a>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <nav class="category-nav">
+            <ul class="category-list">
+                <li class="category-item active">全部赛事</li>
+                <li class="category-item">英超</li>
+                <li class="category-item">西甲</li>
+                <li class="category-item">意甲</li>
+                <li class="category-item">德甲</li>
+                <li class="category-item">中超</li>
+                <li class="category-item">NBA</li>
+                <li class="category-item">CBA</li>
+                <li class="category-item">WNBA</li>
+                <li class="category-item">网球</li>
+                <li class="category-item">乒乓球</li>
+                <li class="category-item">排球</li>
+            </ul>
+        </nav>
+
+        <!-- Live Now Section -->
+        <section class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">正在直播</h2>
+                <a href="#" style="color: var(--text-sub); font-size: 14px;">查看全部 ></a>
+            </div>
+            <div class="live-grid">
+                <!-- Card 1 -->
+                <article class="match-card">
+                    <div class="match-banner">
+                        <img src="https://picsum.photos/seed/ball1/400/250" alt="比赛封面">
+                        <span class="live-tag">直播中</span>
+                    </div>
+                    <div class="match-info">
+                        <h3 class="match-title">欧冠联赛：皇家马德里 vs 曼联</h3>
+                        <div class="match-meta">
+                            <span>11月06日 03:00</span>
+                            <span>欧冠小组赛</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="team">
+                                <div class="team-icon">🇪🇸</div>
+                                <span>皇马</span>
+                            </div>
+                            <div class="score">1 - 0</div>
+                            <div class="team">
+                                <span>曼联</span>
+                                <div class="team-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-watch">立即观看</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="match-card">
+                    <div class="match-banner">
+                        <img src="https://picsum.photos/seed/ball2/400/250" alt="比赛封面">
+                        <span class="live-tag">直播中</span>
+                    </div>
+                    <div class="match-info">
+                        <h3 class="match-title">英超联赛：阿森纳 vs 利物浦</h3>
+                        <div class="match-meta">
+                            <span>11月06日 20:30</span>
+                            <span>英超第10轮</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="team">
+                                <div class="team-icon">🇬🇧</div>
+                                <span>阿森纳</span>
+                            </div>
+                            <div class="score">-- : --</div>
+                            <div class="team">
+                                <span>利物浦</span>
+                                <div class="team-icon">🇬🇧</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-watch">预约提醒</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="match-card">
+                    <div class="match-banner">
+                        <img src="https://picsum.photos/seed/ball3/400/250" alt="比赛封面">
+                        <span class="live-tag">直播中</span>
+                    </div>
+                    <div class="match-info">
+                        <h3 class="match-title">NBA常规赛：洛杉矶湖人 vs 湖人</h3>
+                        <div class="match-meta">
+                            <span>11月07日 10:30</span>
+                            <span>常规赛</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="team">
+                                <div class="team-icon">🇺🇸</div>
+                                <span>湖人</span>
+                            </div>
+                            <div class="score">-- : --</div>
+                            <div class="team">
+                                <span>勇士</span>
+                                <div class="team-icon">🇺🇸</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-watch">立即观看</a>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="match-card">
+                    <div class="match-banner">
+                        <img src="https://picsum.photos/seed/tennis/400/250" alt="比赛封面">
+                        <span class="live-tag">直播中</span>
+                    </div>
+                    <div class="match-info">
+                        <h3 class="match-title">ATP年终总决赛：德约科维奇 vs 阿尔卡拉斯</h3>
+                        <div class="match-meta">
+                            <span>11月06日 18:00</span>
+                            <span>年终总决赛</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="team">
+                                <div class="team-icon">🇷🇸</div>
+                                <span>德约</span>
+                            </div>
+                            <div class="score">2 - 1</div>
+                            <div class="team">
+                                <span>阿尔卡拉斯</span>
+                                <div class="team-icon">🇪🇸</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-watch">立即观看</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Upcoming & Replay Section -->
+        <section class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">即将开赛 & 赛事回放</h2>
+            </div>
+            <div class="match-list">
+                <div class="match-row">
+                    <div class="match-row-info">
+                        <span class="time-tag">11月07日 00:00</span>
+                        <div class="match-row-content">
+                            <div class="match-row-title">意甲联赛：AC米兰 vs 国际米兰</div>
+                            <div class="match-row-status">即将开始</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-row">预约观看</a>
+                </div>
+
+                <div class="match-row">
+                    <div class="match-row-info">
+                        <span class="time-tag">11月06日 21:00</span>
+                        <div class="match-row-content">
+                            <div class="match-row-title">中国男排超级联赛：上海男排 vs 北京男排</div>
+                            <div class="match-row-status">已结束 · 回放中</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-row">观看回放</a>
+                </div>
+
+                <div class="match-row">
+                    <div class="match-row-info">
+                        <span class="time-tag">11月06日 19:30</span>
+                        <div class="match-row-content">
+                            <div class="match-row-title">CBA常规赛：广东宏远 vs 浙江广厦</div>
+                            <div class="match-row-status">已结束 · 回放中</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-row">观看回放</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">咪咕视频简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">会员说明</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>版权声明</h4>
+                    <ul>
+                        <li><a href="#">版权信息</a></li>
+                        <li><a href="#">侵权投诉</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 咪咕视频体育频道 版权所有 | 本页面仅为设计展示，不提供真实视频流</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>

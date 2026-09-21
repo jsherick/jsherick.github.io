@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绵柔金六福 - 经典中国福酒文化与品鉴指南</title>
+    <meta name="description" content="绵柔金六福官网提供中国福酒文化介绍、产品系列展示、品鉴知识、购买渠道及企业介绍。了解绵柔金六福如何以柔顺口感致敬传统，感受中国福文化的深厚底蕴。">
+    <meta name="keywords" content="绵柔金六福, 中国福酒, 金六福白酒, 福文化, 白酒品鉴, 金六福官网">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #F4E4BC;
+            --text-dark: #1a1a1a;
+            --text-gray: #555555;
+            --bg-cream: #FFFCF5;
+            --bg-white: #ffffff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-gold);
+            margin: 10px auto 0;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-gold);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/baijiu_hero/1920/1080.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--primary-gold);
+            color: var(--bg-white);
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--bg-white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Product Showcase */
+        .products {
+            background-color: var(--bg-cream);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            height: 300px;
+            width: 100%;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary-gold);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info .specs {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .product-info .specs span {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn-outline {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-gold);
+            color: white;
+        }
+
+        /* Culture Section */
+        .culture {
+            background-color: var(--bg-white);
+        }
+
+        .culture-layout {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .culture-content {
+            flex: 1;
+        }
+
+        .culture-image {
+            flex: 1;
+        }
+
+        .culture-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .culture-list {
+            margin-top: 30px;
+        }
+
+        .culture-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .culture-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-gold);
+            margin-right: 15px;
+            line-height: 1;
+        }
+
+        .culture-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .culture-text p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Buying Guide / FAQ */
+        .guide {
+            background-color: #f9f9f9;
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .guide-content h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .guide-content p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-item h4 {
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .culture-layout {
+                flex-direction: column;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>绵柔金六福</span> 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/>
+                </svg>
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#" class="active">首页</a>
+                <a href="#products">产品系列</a>
+                <a href="#culture">福文化</a>
+                <a href="#guide">选购指南</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>绵柔金六福</h1>
+            <p>醇厚口感，福泽万家。传承中国福文化精髓，打造极致绵柔体验。</p>
+            <a href="#products" class="btn">探索系列</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding features">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">为什么选择绵柔金六福</h2>
+                <p class="section-subtitle">融合传统酿造工艺与现代科技，为您带来独特的味觉享受。</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍶</div>
+                    <h3>传统酿造</h3>
+                    <p>精选优质高粱、小麦，历经多年窖藏，保留传统白酒的醇香底蕴。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>绵柔工艺</h3>
+                    <p>独创绵柔技术，入口柔顺，回味悠长，不辣喉，不口干。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧧</div>
+                    <h3>福文化内涵</h3>
+                    <p>每一瓶酒都承载着“中国福”的美好寓意，是送礼与宴请的首选。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>匠心品质</h3>
+                    <p>严格的质量管理体系，确保每一滴酒都符合高标准品质要求。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="section-padding products" id="products">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">经典产品系列</h2>
+                <p class="section-subtitle">满足不同场合的品鉴需求，感受绵柔金六福的多样魅力。</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">畅销款</span>
+                        <img src="https://picsum.photos/seed/baijiu1/400/400.jpg" alt="金六福 醉美中国福">
+                    </div>
+                    <div class="product-info">
+                        <h3>金六福 醉美中国福</h3>
+                        <div class="specs">
+                            <span>度数：52°</span>
+                            <span>香型：浓香型</span>
+                        </div>
+                        <p>经典浓香型白酒，入口绵甜，回味悠长，包装喜庆大气，寓意吉祥如意。</p>
+                        <a href="#" class="btn-outline">了解更多</a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">高端款</span>
+                        <img src="https://picsum.photos/seed/baijiu2/400/400.jpg" alt="金六福 龙年生肖酒">
+                    </div>
+                    <div class="product-info">
+                        <h3>金六福 龙年生肖酒</h3>
+                        <div class="specs">
+                            <span>度数：52°</span>
+                            <span>香型：浓香型</span>
+                        </div>
+                        <p>限量版生肖酒，采用顶级原酒勾调，瓶身工艺精湛，收藏价值极高。</p>
+                        <a href="#" class="btn-outline">了解更多</a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">商务款</span>
+                        <img src="https://picsum.photos/seed/baijiu3/400/400.jpg" alt="金六福 世纪经典">
+                    </div>
+                    <div class="product-info">
+                        <h3>金六福 世纪经典</h3>
+                        <div class="specs">
+                            <span>度数：52°</span>
+                            <span>香型：浓香型</span>
+                        </div>
+                        <p>专为商务宴请设计，口感醇厚丰满，彰显尊贵品味，是商务馈赠之佳品。</p>
+                        <a href="#" class="btn-outline">了解更多</a>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">入门款</span>
+                        <img src="https://picsum.photos/seed/baijiu4/400/400.jpg" alt="金六福 福满堂">
+                    </div>
+                    <div class="product-info">
+                        <h3>金六福 福满堂</h3>
+                        <div class="specs">
+                            <span>度数：42°</span>
+                            <span>香型：浓香型</span>
+                        </div>
+                        <p>口感柔顺清爽，适合家庭聚会及日常小酌，价格亲民，福运满堂。</p>
+                        <a href="#" class="btn-outline">了解更多</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="section-padding culture" id="culture">
+        <div class="container">
+            <div class="culture-layout">
+                <div class="culture-image">
+                    <img src="https://picsum.photos/seed/wine_culture/600/400.jpg" alt="金六福福文化">
+                </div>
+                <div class="culture-content">
+                    <h2 class="section-title">传承中国福文化</h2>
+                    <p>金六福品牌始终致力于将“福”文化融入产品与品牌内涵中。“福”代表着幸福、吉祥、圆满。绵柔金六福不仅是一款美酒，更是一种情感的寄托和文化的传递。</p>
+                    <div class="culture-list">
+                        <div class="culture-item">
+                            <div class="culture-number">01</div>
+                            <div class="culture-text">
+                                <h4>祈福纳祥</h4>
+                                <p>以酒为媒，传递祝福，寄托对美好生活的向往。</p>
+                            </div>
+                        </div>
+                        <div class="culture-item">
+                            <div class="culture-number">02</div>
+                            <div class="culture-text">
+                                <h4>团圆美满</h4>
+                                <p>在团圆时刻，一杯绵柔金六福，让亲情更浓，友情更真。</p>
+                            </div>
+                        </div>
+                        <div class="culture-item">
+                            <div class="culture-number">03</div>
+                            <div class="culture-text">
+                                <h4>吉祥如意</h4>
+                                <p>独特的绵柔工艺，如同生活中的顺遂，入口即化，回味甘甜。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide / FAQ Section -->
+    <section class="section-padding guide" id="guide">
+        <div class="container">
+            <div class="guide-container">
+                <div class="guide-content">
+                    <h2 class="section-title">选购与品鉴指南</h2>
+                    <h3>如何辨别正宗绵柔金六福</h3>
+                    <p>在选购时，请认准官方防伪标识。正宗绵柔金六福具有以下特点：酒体晶莹剔透，无悬浮物；开瓶后酒香浓郁，具有典型的窖香和粮香；入口绵甜柔和，无刺激性灼烧感，饮后口不干、头不痛。</p>
+                    <h3>不同场合的选择建议</h3>
+                    <p>家庭聚会推荐选择“福满堂”等入门系列，口感柔和；商务宴请推荐“醉美中国福”或“世纪经典”，包装大气，品质上乘；收藏送礼则推荐生肖系列或高端定制款。</p>
+                </div>
+                <div class="faq-section">
+                    <h3 class="text-center" style="margin-bottom: 20px;">常见问题 (FAQ)</h3>
+                    <div class="faq-item">
+                        <h4>绵柔金六福适合长期储存吗？</h4>
+                        <p>52度以上的绵柔金六福具有一定的陈年潜力，在阴凉避光的环境中储存，口感会随着时间的推移更加醇厚。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>绵柔工艺具体是指什么？</h4>
+                        <p>绵柔工艺通过特殊的勾调技术，降低了白酒中的刺激性杂醇油含量，使酒体更加细腻、柔顺，减少了对人体的刺激。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>哪里可以购买到正品？</h4>
+                        <p>您可以通过品牌官方授权的商超、烟酒店以及品牌官方线上商城进行购买，确保买到品质保证的正品。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        金六福酒业是中国著名的白酒品牌，以“福文化”为核心，致力于为消费者提供高品质的白酒产品。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">醉美中国福</a></li>
+                        <li><a href="#">世纪经典</a></li>
+                        <li><a href="#">生肖酒系列</a></li>
+                        <li><a href="#">商务定制</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">购买指南</a></li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-XXX-XXXX</li>
+                        <li>邮箱：service@jinfufu.com</li>
+                        <li>地址：中国·四川·泸州</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 金六福酒业 版权所有 | 绵柔金六福 官方展示页</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
